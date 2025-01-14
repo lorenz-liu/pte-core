@@ -9,6 +9,7 @@ import {
 import React from "react";
 import useRS from "../hooks/useRS";
 import {BsListCheck} from "react-icons/bs";
+import {keyframes} from "@emotion/react";
 
 export default function BaseContainer({ children }: { children: React.ReactNode }) {
     const {openSentences, setOpenSentence, currentPracticeSeq} = useRS();
@@ -50,6 +51,29 @@ export default function BaseContainer({ children }: { children: React.ReactNode 
                         fontFamily={'Courier New, monospace'}
                     >@lorenz</Link>
                     </Text>
+                    <Box
+                        cursor={'pointer'}
+                        marginLeft={'10px'}
+                        w={'140px'}
+                        h={'25px'}
+                        background={'orange'}
+                        borderRadius={'4px'}
+                        padding={'3px'}
+                        justifyContent={'center'}
+                        alignItems={'center'}
+                        display={'flex'}
+                        animation={`${keyframes`
+                              0% { transform: scale(0.95); }
+                              50% { transform: scale(1); }
+                              100% { transform: scale(0.95); }
+                            `} 2s ease-in-out infinite`}
+                        _hover={{ transform: 'scale(1.1)' }}
+                        transition="all 0.2s"
+                    >
+                        <Text fontSize={'12px'} color={'white'} fontWeight={'bold'}>
+                            buy my cat a treat :)
+                        </Text>
+                    </Box>
                 </GridItem>
             </Grid>
         </Box>
