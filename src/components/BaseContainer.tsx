@@ -27,14 +27,14 @@ export default function BaseContainer({ children }: { children: React.ReactNode 
             >
                 <GridItem rowSpan={1} bg={'black'} justifyContent={'flex-start'} alignItems={'center'} display={'flex'} padding={'10px'}>
                     {currentPracticeSeq > -1 && <IconButton
-                        variant={'solid'}
-                        size={'md'}
-                        color={'black'}
-                        bg={'white'}
-                        onClick={() => setOpenSentence(!openSentences)}
-                        aria-label="Open sentences"
+                      variant={'solid'}
+                      size={'md'}
+                      color={'black'}
+                      bg={'white'}
+                      onClick={() => setOpenSentence(!openSentences)}
+                      aria-label="Open sentences"
                     >
-                        <BsListCheck/>
+                      <BsListCheck/>
                     </IconButton>}
                 </GridItem>
                 <GridItem rowSpan={18}>
@@ -54,7 +54,7 @@ export default function BaseContainer({ children }: { children: React.ReactNode 
                     <Box
                         cursor={'pointer'}
                         marginLeft={'10px'}
-                        w={'140px'}
+                        w={'160px'}
                         h={'25px'}
                         background={'orange'}
                         borderRadius={'4px'}
@@ -63,14 +63,22 @@ export default function BaseContainer({ children }: { children: React.ReactNode 
                         alignItems={'center'}
                         display={'flex'}
                         animation={`${keyframes`
-                              0% { transform: scale(0.95); }
-                              50% { transform: scale(1); }
-                              100% { transform: scale(0.95); }
-                            `} 2s ease-in-out infinite`}
+                            0% { transform: scale(0.95); }
+                            50% { transform: scale(1); }
+                            100% { transform: scale(0.95); }
+                        `} 2s ease-in-out infinite`}
                         _hover={{ transform: 'scale(1.1)' }}
                         transition="all 0.2s"
+                        onClick={() => {
+                            window.open("https://buymeacoffee.com/llorenzll", "_blank", "noopener noreferrer");
+                        }}
                     >
-                        <Text fontSize={'12px'} color={'white'} fontWeight={'bold'}>
+                        <Text
+                            fontSize={'12px'}
+                            color={'white'}
+                            fontWeight={'bold'}
+                            fontFamily={'Courier New, monospace'}
+                        >
                             buy my cat a treat :)
                         </Text>
                     </Box>
